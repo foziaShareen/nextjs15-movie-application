@@ -3,6 +3,7 @@ import MenuItem from './MenuItem'
 import {AiFillHome} from 'react-icons/ai'
 import { AiFillInfoCircle } from "react-icons/ai";
 import Link from 'next/link'
+import DarkModeSwitch from './DarkModeSwitch'
 
 
 
@@ -14,6 +15,8 @@ export default function Header() {
             <MenuItem title="about" address="/" Icon={AiFillInfoCircle} />
             </div>
             <div className='flex items-center gap-2'>
+            <DarkModeSwitch />
+
                 <Link href={'/'}className='font-bold  text-2xl bg-amber-500  px-1 rounded'>IMDb</Link>
                 <span>Clone</span>
             </div>

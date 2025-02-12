@@ -1,11 +1,17 @@
 
 
-export default function Results({ results }) {
+
+export default function Results({ data }) {
   return (
-    <div className='sm:grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 max-w-6xl mx-auto py-4'>
-      {results.map((result) => (
-        <h1 key={result.id} result={result} >result={result}</h1>
-      ))}
+    <div >
+      
+        {Array.isArray(data) && data.map((data) => (
+          <div key={data.id} >
+
+            <h2>{data.title}h2</h2> 
+            
+          </div>
+        ))}
     </div>
   );
 }
